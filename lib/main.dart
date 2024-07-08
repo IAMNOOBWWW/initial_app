@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+//import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,17 +36,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text('hello'),
-        ),
-        body: Center(
-            child: Container(
-                width: 100,
-                height: 100,
-                child: CircleAvatar(
-                  backgroundImage: AssetImage(
-                      'assets/images/lib/images/9a72ab2b-5c65-4614-ad6f-87bf9eeb4fbf.jpg'),
-                  backgroundColor: Colors.pink,
-                ))));
+      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      title: const Text(
+        'hello',
+        style: TextStyle(fontFamily: 'wittgenstein'),
+      ),
+    ));
   }
 }
