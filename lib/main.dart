@@ -35,12 +35,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      title: const Text(
-        'hello',
-        style: TextStyle(fontFamily: 'wittgenstein'),
+      appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text('no thank you')),
+      body: Column(
+        children: [
+          Text(
+            'hello world',
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+          ),
+          Text(
+            'hello world',
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            'hello world',
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+          ),
+          Text(
+            'hello world',
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+          ),
+        ],
       ),
-    ));
+    );
   }
 }
