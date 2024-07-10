@@ -34,20 +34,22 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var time;
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('no thank you'),
-            )),
+            title: Text('no thank you')),
         body: Center(
-          child: Card(
-            elevation: 5,
-            child: Text(
-              'hello world',
-              style: TextStyle(fontSize: 21),
-            ),
+          child: Container(
+            width: 200,
+            height: 200,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'Current Time: ${time.hour}:${time.minute}: ${time.second}',
+                style: TextStyle(fontSize: 25),
+              )
+            ]),
           ),
         ));
   }
