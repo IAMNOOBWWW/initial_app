@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,36 +31,37 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var myOpacity = 1.0;
-
+  var arrIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Text('Foo animation')),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedOpacity(
-                opacity: myOpacity,
-                duration: Duration(seconds: 2),
-                child: Container(
-                  width: 200,
-                  height: 100,
-                  color: Colors.blue,
-                ),
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      myOpacity = 0.0;
-                    });
-                  },
-                  child: Text("close"))
-            ],
-          ),
+            title: Text('3d List ')),
+        body: ListWheelScrollView(
+          children: [
+            Container(
+              width: double.infinity,
+              color: Colors.blue,
+            ),
+            Container(
+              width: double.infinity,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: double.infinity,
+              color: Colors.green,
+            ),
+            Container(
+              width: double.infinity,
+              color: Colors.red,
+            ),
+            Container(
+              width: double.infinity,
+              color: Colors.pink,
+            ),
+          ],
+          itemExtent: 100,
         ));
   }
 }
